@@ -1,0 +1,114 @@
+<div align="center">
+
+<img src="{{ render.header_svg_path }}" width="100%" alt="{{ profile.name }} profile header">
+
+<br>
+
+<img src="{{ render.pet_svg_path }}" width="100%" alt="{{ profile.github_username }} commit dinosaur">
+
+<br>
+
+{% if profile.introduction %}<p><b>{{ profile.introduction }}</b></p>{% endif %}
+
+<sub>Public repositories analyzed automatically · A new dinosaur every 100 commits · Refreshed every hour</sub>
+
+<a href="https://github.com/{{ profile.github_username }}?tab=repositories">Repositories</a>
+{% if profile.email %} · <a href="mailto:{{ profile.email }}">Email</a>{% endif %}
+{% if profile.blog_url %} · <a href="{{ profile.blog_url }}">Blog</a>{% endif %}
+
+</div>
+
+<br>
+
+## Information
+
+{% if profile.story %}
+{{ profile.story }}
+{% endif %}
+
+{% if profile.affiliation or profile.interests or profile.certifications %}
+<table>
+  {% if profile.affiliation %}<tr><td><b>Current</b></td><td>{{ profile.affiliation }}</td></tr>{% endif %}
+  {% if profile.interests %}<tr><td><b>Interests</b></td><td>{{ profile.interests | join(' · ') }}</td></tr>{% endif %}
+  {% if profile.certifications %}<tr><td><b>Certifications</b></td><td>{{ profile.certifications | join(' · ') }}</td></tr>{% endif %}
+</table>
+{% endif %}
+
+{% if profile.strengths or profile.current_focus %}
+<table>
+  <tr>
+    {% if profile.strengths %}
+    <td width="50%" valign="top">
+      <h3>What I bring</h3>
+      <ul>{% for item in profile.strengths %}<li>{{ item }}</li>{% endfor %}</ul>
+    </td>
+    {% endif %}
+    {% if profile.current_focus %}
+    <td width="50%" valign="top">
+      <h3>Currently focused on</h3>
+      <ul>{% for item in profile.current_focus %}<li>{{ item }}</li>{% endfor %}</ul>
+    </td>
+    {% endif %}
+  </tr>
+</table>
+{% endif %}
+
+{% set has_stacks = stacks.get('ai_cloud') or stacks.get('back_end') or stacks.get('front_end') or stacks.get('database') %}
+{% if has_stacks or development_tools %}
+<br>
+
+## Dev Stacks
+
+<table>
+  {% if stacks.get('ai_cloud') %}<tr><td><b>AI & Cloud</b></td><td>{% for item in stacks.ai_cloud %}<code>{{ item }}</code>{% if not loop.last %} &nbsp;{% endif %}{% endfor %}</td></tr>{% endif %}
+  {% if stacks.get('back_end') %}<tr><td><b>Back-end</b></td><td>{% for item in stacks.back_end %}<code>{{ item }}</code>{% if not loop.last %} &nbsp;{% endif %}{% endfor %}</td></tr>{% endif %}
+  {% if stacks.get('front_end') %}<tr><td><b>Front-end</b></td><td>{% for item in stacks.front_end %}<code>{{ item }}</code>{% if not loop.last %} &nbsp;{% endif %}{% endfor %}</td></tr>{% endif %}
+  {% if stacks.get('database') %}<tr><td><b>Database</b></td><td>{% for item in stacks.database %}<code>{{ item }}</code>{% if not loop.last %} &nbsp;{% endif %}{% endfor %}</td></tr>{% endif %}
+  {% if development_tools %}<tr><td><b>Tools</b></td><td>{% for item in development_tools %}<code>{{ item }}</code>{% if not loop.last %} &nbsp;{% endif %}{% endfor %}</td></tr>{% endif %}
+</table>
+{% endif %}
+
+<br>
+
+## Featured Repositories
+
+<table>
+{% for row in repositories | batch(2) %}
+  <tr>
+  {% for repo in row %}
+    <td width="50%" valign="top">
+      <h3><a href="{{ repo.url }}">{{ repo.name }}</a></h3>
+      <p>{{ repo.summary }}</p>
+      <p><sub>{% if repo.primary_language %}<b>{{ repo.primary_language.name }}</b> · {% endif %}★ {{ repo.stars }} · Forks {{ repo.forks }} · Updated {{ repo.last_commit_at[:10] if repo.last_commit_at else 'N/A' }}</sub></p>
+    </td>
+  {% endfor %}
+  {% if row | length == 1 %}<td width="50%"></td>{% endif %}
+  </tr>
+{% endfor %}
+</table>
+
+<br>
+
+## Languages
+
+<div align="center">
+  <img src="{{ render.language_svg_path }}" width="100%" alt="Language distribution across featured repositories">
+</div>
+
+{% if activities %}
+<br>
+
+## Activities
+
+{% for group in activities %}
+### {{ group.year }}
+
+{% for item in group['items'] %}
+- **{{ item.title }}**{% if item.period %} <sub>{{ item.period }}</sub>{% endif %}{% if item.description %} — {{ item.description }}{% endif %}
+{% endfor %}
+{% endfor %}
+{% endif %}
+
+---
+
+<div align="center"><sub>Curated automatically from public repositories · Refreshed hourly</sub></div>

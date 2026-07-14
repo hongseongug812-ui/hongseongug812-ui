@@ -1,0 +1,17 @@
+{
+  "username": "octo-demo",
+  "repositories": [
+    {
+      "name": "signal-map",
+      "url": "https://github.com/octo-demo/signal-map",
+      "description": "A data visualization toolkit.",
+      "stars": 42,
+      "forks": 7,
+      "score": 186,
+      "readme_sha": "",
+      "readme_text": "",
+      "primary_language": {"name": "Python"},
+      "languages": [{"name": "Python", "color": "#3572A5"}, {"name": "TypeScript", "color": "#3178C6"}]
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+# Copy this template into a repository named after your GitHub username.
+profile:
+  # Only github_username is required. Empty name uses the GitHub display name.
+  # Empty headline, interests, strengths, focus, stacks, and activities are inferred from repositories.
+  name: "" # Enter another display name here to override GitHub.
+  headline: "" # Enter another role here to override repository analysis.
+  introduction: ""
+  story: ""
+  affiliation: ""
+  interests: []
+  certifications: []
+  strengths: []
+  current_focus: []
+  email: ""
+  blog_url: ""
+  github_username: "hongseongug812-ui" # Empty in Actions = repository owner's username
+
+# Add or remove values freely. Empty sections are hidden from the generated README.
+stacks:
+  ai_cloud: []
+  back_end: []
+  front_end: []
+  database: []
+
+development_tools: []
+
+activities: []
+# Example:
+# activities:
+#   - year: "2026"
+#     items:
+#       - title: "Project or program name"
+#         description: "What you built or learned"
+#         period: "2026.03 - 2026.06"
+
+selection:
+  top_n: 6
+  weights:
+    star: 3
+    fork: 2
+    readme: 5
+    description: 15
+    diversity_cap: 10
+    recent_commit:
+      within_30_days: 30
+      within_90_days: 15
+      older: 5
+
+llm:
+  provider: local # local (Ollama) | cloud (Anthropic; optional)
+  model: qwen2.5:3b-instruct
+  max_readme_chars: 3500
+
+render:
+  theme_color: "7c5cfc"
+  header_svg_path: assets/header.svg
+  pet_svg_path: assets/pet.svg
+  language_svg_path: assets/languages.svg

@@ -1,0 +1,7 @@
+.venv/
+__pycache__/
+*.py[cod]
+.cache/repos.json
+.cache/curated.json
+!/.cache/.gitkeep
+!/.cache/summaries.json

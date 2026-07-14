@@ -1,0 +1,20 @@
+name: Setup Ollama
+description: Restore a cached Ollama model and start a local server.
+inputs:
+  model:
+    description: Ollama model to pull when not cached
+    required: false
+    default: qwen2.5:3b-instruct
+runs:
+  using: composite
+  steps:
+    - uses: actions/cache@v4
+      with:
+        path: ~/.ollama
+        key: ollama-${{ runner.os }}-${{ inputs.model }}-v1
+    - shell: bash
+      run: |
+        curl -fsSL https://ollama.com/install.sh | sh
+        ollama serve > /tmp/ollama.log 2>&1 &
+        for _ in {1..30}; do curl -fs http://127.0.0.1:11434/api/tags && break; sleep 1; done
+        ollama pull "${{ inputs.model }}"
