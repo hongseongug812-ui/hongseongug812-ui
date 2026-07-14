@@ -92,9 +92,9 @@
 
 ## 사용 언어
 
-{% if skill_icons_query %}
+{% if language_badges %}
 <div align="center">
-  <img src="https://skillicons.dev/icons?i={{ skill_icons_query }}&theme=dark" alt="사용 언어 아이콘">
+  {% for badge in language_badges %}<a href="{{ badge.url }}"><img src="https://skillicons.dev/icons?i={{ badge.slug }}&theme=dark" alt="{{ badge.name }}" title="{{ badge.name }}"></a>{% endfor %}
 </div>
 
 {% endif %}

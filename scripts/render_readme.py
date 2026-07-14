@@ -105,26 +105,53 @@ def infer_stacks(repositories: list[dict]) -> dict[str, list[str]]:
     }
 
 
-SKILLICON_SLUGS = {
-    "python": "python", "javascript": "js", "typescript": "ts", "java": "java",
-    "kotlin": "kotlin", "go": "go", "rust": "rust", "c": "c", "c++": "cpp",
-    "c#": "cs", "php": "php", "ruby": "ruby", "swift": "swift", "html": "html",
-    "css": "css", "scss": "sass", "shell": "bash", "dart": "dart", "r": "r",
-    "vue": "vue", "scala": "scala", "lua": "lua", "haskell": "haskell",
-    "powershell": "powershell", "objective-c": "objectivec", "perl": "perl",
-    "matlab": "matlab", "elixir": "elixir", "clojure": "clojure",
-    "groovy": "groovy", "coffeescript": "coffeescript", "vim script": "vim",
-    "jupyter notebook": "python", "dockerfile": "docker",
+LANGUAGE_INFO = {
+    "python": {"slug": "python", "url": "https://www.python.org/"},
+    "javascript": {"slug": "js", "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript"},
+    "typescript": {"slug": "ts", "url": "https://www.typescriptlang.org/"},
+    "java": {"slug": "java", "url": "https://www.java.com/"},
+    "kotlin": {"slug": "kotlin", "url": "https://kotlinlang.org/"},
+    "go": {"slug": "go", "url": "https://go.dev/"},
+    "rust": {"slug": "rust", "url": "https://www.rust-lang.org/"},
+    "c": {"slug": "c", "url": "https://en.wikipedia.org/wiki/C_(programming_language)"},
+    "c++": {"slug": "cpp", "url": "https://isocpp.org/"},
+    "c#": {"slug": "cs", "url": "https://learn.microsoft.com/en-us/dotnet/csharp/"},
+    "php": {"slug": "php", "url": "https://www.php.net/"},
+    "ruby": {"slug": "ruby", "url": "https://www.ruby-lang.org/en/"},
+    "swift": {"slug": "swift", "url": "https://www.swift.org/"},
+    "html": {"slug": "html", "url": "https://developer.mozilla.org/en-US/docs/Web/HTML"},
+    "css": {"slug": "css", "url": "https://developer.mozilla.org/en-US/docs/Web/CSS"},
+    "scss": {"slug": "sass", "url": "https://sass-lang.com/"},
+    "shell": {"slug": "bash", "url": "https://www.gnu.org/software/bash/"},
+    "dart": {"slug": "dart", "url": "https://dart.dev/"},
+    "r": {"slug": "r", "url": "https://www.r-project.org/"},
+    "vue": {"slug": "vue", "url": "https://vuejs.org/"},
+    "scala": {"slug": "scala", "url": "https://www.scala-lang.org/"},
+    "lua": {"slug": "lua", "url": "https://www.lua.org/"},
+    "haskell": {"slug": "haskell", "url": "https://www.haskell.org/"},
+    "powershell": {"slug": "powershell", "url": "https://learn.microsoft.com/en-us/powershell/"},
+    "objective-c": {"slug": "objectivec", "url": "https://developer.apple.com/documentation/objectivec"},
+    "perl": {"slug": "perl", "url": "https://www.perl.org/"},
+    "matlab": {"slug": "matlab", "url": "https://www.mathworks.com/products/matlab.html"},
+    "elixir": {"slug": "elixir", "url": "https://elixir-lang.org/"},
+    "clojure": {"slug": "clojure", "url": "https://clojure.org/"},
+    "groovy": {"slug": "groovy", "url": "https://groovy-lang.org/"},
+    "coffeescript": {"slug": "coffeescript", "url": "https://coffeescript.org/"},
+    "vim script": {"slug": "vim", "url": "https://www.vim.org/"},
+    "jupyter notebook": {"slug": "python", "url": "https://jupyter.org/"},
+    "dockerfile": {"slug": "docker", "url": "https://docs.docker.com/"},
 }
 
 
-def skillicons_query(language_names: list[str]) -> str:
-    slugs = []
+def language_badges(language_names: list[str]) -> list[dict]:
+    badges = []
+    seen = set()
     for name in language_names:
-        slug = SKILLICON_SLUGS.get(name.lower())
-        if slug and slug not in slugs:
-            slugs.append(slug)
-    return ",".join(slugs)
+        info = LANGUAGE_INFO.get(name.lower())
+        if info and info["slug"] not in seen:
+            seen.add(info["slug"])
+            badges.append({"name": name, "slug": info["slug"], "url": info["url"]})
+    return badges
 
 
 def infer_activities(repositories: list[dict], username: str = "") -> list[dict]:
@@ -204,7 +231,7 @@ def main() -> None:
             stacks[category] = values
     language_names = list(dict.fromkeys(
         repo["primary_language"]["name"]
-        for repo in repositories
+        for repo in all_repositories
         if repo.get("primary_language")
     ))
     rendered = environment.get_template("readme.md.j2").render(
@@ -214,7 +241,7 @@ def main() -> None:
         development_tools=config.get("development_tools", []),
         activities=config.get("activities", []) or infer_activities(all_repositories, profile.get("github_username", "")),
         render=config["render"],
-        skill_icons_query=skillicons_query(language_names),
+        language_badges=language_badges(language_names),
     )
     Path(args.output).write_text(rendered.rstrip() + "\n", encoding="utf-8")
     cache_path.parent.mkdir(parents=True, exist_ok=True)

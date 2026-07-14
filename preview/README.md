@@ -111,8 +111,7 @@
 ## 사용 언어
 
 <div align="center">
-  <img src="https://skillicons.dev/icons?i=python,js&theme=dark" alt="사용 언어 아이콘">
-</div>
+<a href="https://www.python.org/"><img src="https://skillicons.dev/icons?i=python&theme=dark" alt="Python" title="Python"></a><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"><img src="https://skillicons.dev/icons?i=js&theme=dark" alt="JavaScript" title="JavaScript"></a><a href="https://www.java.com/"><img src="https://skillicons.dev/icons?i=java&theme=dark" alt="Java" title="Java"></a><a href="https://www.typescriptlang.org/"><img src="https://skillicons.dev/icons?i=ts&theme=dark" alt="TypeScript" title="TypeScript"></a><a href="https://kotlinlang.org/"><img src="https://skillicons.dev/icons?i=kotlin&theme=dark" alt="Kotlin" title="Kotlin"></a></div>
 
 <div align="center">
   <img src="assets/languages.svg" width="100%" alt="대표 프로젝트의 언어 분포">

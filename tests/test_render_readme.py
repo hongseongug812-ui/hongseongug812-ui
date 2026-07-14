@@ -3,7 +3,7 @@ from pathlib import Path
 import unittest
 
 sys.path.insert(0, str(Path(__file__).parents[1] / "scripts"))
-from render_readme import infer_activities, skillicons_query
+from render_readme import infer_activities, language_badges
 
 
 def repo(**overrides):
@@ -23,15 +23,18 @@ class InferActivitiesTests(unittest.TestCase):
         self.assertEqual(titles, ["c"])
 
 
-class SkillIconsQueryTests(unittest.TestCase):
+class LanguageBadgesTests(unittest.TestCase):
     def test_maps_known_languages_and_dedupes(self):
-        self.assertEqual(skillicons_query(["Python", "JavaScript", "Python"]), "python,js")
+        badges = language_badges(["Python", "JavaScript", "Python"])
+        self.assertEqual([badge["slug"] for badge in badges], ["python", "js"])
+        self.assertEqual(badges[0]["url"], "https://www.python.org/")
 
     def test_skips_unmapped_languages(self):
-        self.assertEqual(skillicons_query(["ShaderLab", "Python"]), "python")
+        badges = language_badges(["ShaderLab", "Python"])
+        self.assertEqual([badge["slug"] for badge in badges], ["python"])
 
     def test_empty_when_nothing_maps(self):
-        self.assertEqual(skillicons_query(["ShaderLab"]), "")
+        self.assertEqual(language_badges(["ShaderLab"]), [])
 
 
 if __name__ == "__main__":
