@@ -21,6 +21,8 @@
   .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 0 16px; }
   .color-row { display: flex; align-items: center; gap: 10px; }
   .color-row input[type=color] { width: 44px; height: 34px; padding: 2px; }
+  .deploy-row { display: flex; align-items: center; gap: 8px; font-weight: 400; font-size: 13px; margin: 4px 0 14px; }
+  .deploy-row input { width: auto; margin: 0; }
   button { background: #7c5cfc; color: white; border: none; border-radius: 8px; padding: 12px 22px; font-size: 15px; font-weight: 600; cursor: pointer; }
   button:hover { background: #6a4be0; }
   .log { border: 1px solid #d1d5db; border-radius: 10px; padding: 16px 20px; margin-bottom: 20px; }
@@ -162,6 +164,11 @@
       <input type="text" name="theme_color" id="theme_color_text" value="{{ theme_color }}">
     </div>
   </fieldset>
+
+  <label class="deploy-row">
+    <input type="checkbox" name="deploy" value="1" checked>
+    실행 성공 시 실제 프로필 저장소에 commit·push하고 GitHub Actions까지 자동 실행
+  </label>
 
   <button type="submit">저장하고 파이프라인 실행</button>
 </form>

@@ -3,7 +3,7 @@ from pathlib import Path
 import unittest
 
 sys.path.insert(0, str(Path(__file__).parents[1] / "scripts"))
-from dashboard import apply_form, format_activities, parse_activities, split_commas, split_lines
+from dashboard import apply_form, format_activities, parse_activities, parse_repo_slug, split_commas, split_lines
 
 
 class SplitHelperTests(unittest.TestCase):
@@ -58,6 +58,20 @@ class ActivitiesTests(unittest.TestCase):
         config = {"profile": {}, "stacks": {}, "activities": [{"year": "2020", "items": []}]}
         apply_form(config, {"github_username": "octocat", "activities": ""})
         self.assertEqual(config["activities"], [])
+
+
+class ParseRepoSlugTests(unittest.TestCase):
+    def test_https_url(self):
+        self.assertEqual(parse_repo_slug("https://github.com/octocat/hello-world.git"), "octocat/hello-world")
+
+    def test_ssh_url(self):
+        self.assertEqual(parse_repo_slug("git@github.com:octocat/hello-world.git"), "octocat/hello-world")
+
+    def test_https_url_without_git_suffix(self):
+        self.assertEqual(parse_repo_slug("https://github.com/octocat/hello-world"), "octocat/hello-world")
+
+    def test_non_github_url_returns_empty(self):
+        self.assertEqual(parse_repo_slug("https://gitlab.com/octocat/hello-world.git"), "")
 
 
 if __name__ == "__main__":

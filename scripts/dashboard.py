@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import argparse
+import re
 import subprocess
 import sys
 import time
@@ -115,6 +116,45 @@ def run_pipeline() -> list[dict]:
     return log
 
 
+def parse_repo_slug(remote_url: str) -> str:
+    match = re.search(r"github\.com[:/](.+?)(?:\.git)?$", remote_url.strip())
+    return match.group(1) if match else ""
+
+
+def remote_repo_slug(remote: str = "origin") -> str:
+    result = subprocess.run(["git", "remote", "get-url", remote], cwd=ROOT, capture_output=True, text=True)
+    return parse_repo_slug(result.stdout) if result.returncode == 0 else ""
+
+
+def deploy() -> list[dict]:
+    """Commit config changes, sync with the profile repo, and trigger its refresh workflow."""
+    log = []
+
+    def run(label: str, command: list[str]) -> subprocess.CompletedProcess:
+        result = subprocess.run(command, cwd=ROOT, capture_output=True, text=True, timeout=120)
+        log.append({"label": label, "ok": result.returncode == 0, "output": (result.stdout + result.stderr).strip()})
+        return result
+
+    status = subprocess.run(["git", "status", "--porcelain"], cwd=ROOT, capture_output=True, text=True)
+    if status.stdout.strip():
+        run("변경사항 스테이징", ["git", "add", "-A"])
+        run("변경사항 커밋", ["git", "commit", "-m", "config: update via dashboard"])
+
+    if run("원격 저장소 확인", ["git", "fetch", "origin", "main"]).returncode != 0:
+        return log
+    if run("원격 변경사항 병합", ["git", "merge", "origin/main", "--no-edit", "-X", "theirs"]).returncode != 0:
+        return log
+    if run("프로필 저장소로 push", ["git", "push", "origin", "main"]).returncode != 0:
+        return log
+
+    repo_slug = remote_repo_slug("origin")
+    if not repo_slug:
+        log.append({"label": "GitHub Actions 실행", "ok": False, "output": "origin 저장소 주소를 확인할 수 없습니다."})
+        return log
+    run("GitHub Actions 워크플로 실행", ["gh", "workflow", "run", "Update profile README", "--repo", repo_slug])
+    return log
+
+
 def render_page(status: list[dict] | None) -> str:
     config = load_config()
     profile = config.get("profile", {})
@@ -196,6 +236,8 @@ class DashboardHandler(BaseHTTPRequestHandler):
         save_config(config)
 
         status = run_pipeline()
+        if fields.get("deploy") and all(step["ok"] for step in status):
+            status += deploy()
         self._send_html(render_page(status=status))
 
 
