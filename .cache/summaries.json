@@ -1,1 +1,8 @@
-{}
+{
+  "051656e7ad4a7be0faa9d52e87523c617a0547b1": "MC DevKit is a web-based server management tool that allows easy opening and managing of Minecraft servers without port forwarding, supporting external access, team management, real-time monitoring, and automatic performance optimization.",
+  "1034ed0c1b9c7bc34d7b3f0ee44828fd0f9e5ff9": "Auto Profile Curator is a GitHub repository that automatically analyzes and curates the README of public repositories, extracting key information such as role, technology stack, projects, and recent activity to generate an optimized profile for its owner.",
+  "47b0f0233c832a814df7012b48df9dc969d46c8c": "This GitHub repository provides a CLI tool for benchmarking local LLMs, comparing results across Mac and Windows devices in a dashboard format, and automatically generating PDF reports based on predefined acceptance criteria.",
+  "15ed13899e411759ebd5309a2f75cca1865209dc": "Grounded Work AI is an AI business assistant platform that uses grounded artificial intelligence to generate answers, drafts, and execute actions based on uploaded documents. It includes features for document-based Q&A, automatic email/Jira ticket/Slack message drafting, and action approval with real-time monitoring.",
+  "8894ad76d32421581806478fbf79a0797ed3b838": "SafeWave is a real-time AI platform that detects falls, unauthorized entries, and prolonged inactivity using WiFi Channel State Information (CSI), without the need for cameras or wearable devices, and notifies caregivers via WebSocket.",
+  "e9afcea2ef0496e28b620456b1564e8ae2f37a85": "Pixel HQ is a TypeScript React application that provides an AI company's project management dashboard, allowing users to manage projects from a top-down view and interact with multiple AI agents for various tasks."
+}
