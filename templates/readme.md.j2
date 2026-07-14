@@ -25,30 +25,13 @@
 {{ profile.story }}
 {% endif %}
 
-{% if profile.affiliation or profile.interests or profile.certifications %}
+{% if profile.affiliation or profile.interests or profile.certifications or profile.strengths or profile.current_focus %}
 <table>
   {% if profile.affiliation %}<tr><td><b>소속</b></td><td>{{ profile.affiliation }}</td></tr>{% endif %}
   {% if profile.interests %}<tr><td><b>관심 분야</b></td><td>{{ profile.interests | join(' · ') }}</td></tr>{% endif %}
   {% if profile.certifications %}<tr><td><b>자격증</b></td><td>{{ profile.certifications | join(' · ') }}</td></tr>{% endif %}
-</table>
-{% endif %}
-
-{% if profile.strengths or profile.current_focus %}
-<table>
-  <tr>
-    {% if profile.strengths %}
-    <td width="50%" valign="top">
-      <h3>강점</h3>
-      <ul>{% for item in profile.strengths %}<li>{{ item }}</li>{% endfor %}</ul>
-    </td>
-    {% endif %}
-    {% if profile.current_focus %}
-    <td width="50%" valign="top">
-      <h3>현재 집중하는 것</h3>
-      <ul>{% for item in profile.current_focus %}<li>{{ item }}</li>{% endfor %}</ul>
-    </td>
-    {% endif %}
-  </tr>
+  {% if profile.strengths %}<tr><td><b>강점</b></td><td><ul>{% for item in profile.strengths %}<li>{{ item }}</li>{% endfor %}</ul></td></tr>{% endif %}
+  {% if profile.current_focus %}<tr><td><b>현재 집중하는 것</b></td><td><ul>{% for item in profile.current_focus %}<li>{{ item }}</li>{% endfor %}</ul></td></tr>{% endif %}
 </table>
 {% endif %}
 
