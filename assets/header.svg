@@ -1,10 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="900" height="320" viewBox="0 0 900 320" role="img" aria-label="hsu의 프로필 헤더">
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="320" viewBox="0 0 900 320" role="img" aria-label="홍성욱의 프로필 헤더">
 <style>
   .panel { fill: #ffffff; stroke: #d0d7de; }
   .name { fill: #0d1117; font: 800 50px ui-monospace, SFMono-Regular, Menlo, monospace; letter-spacing: 0; }
   .headline { fill: #424a53; font: 700 18px -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; letter-spacing: 0; }
   .meta { fill: #656d76; font: 13px ui-monospace, SFMono-Regular, Menlo, monospace; letter-spacing: 0; }
-  .eyebrow { fill: #7c5cfc; font: 700 12px -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; letter-spacing: 0; }
+  .eyebrow { fill: #00e01a; font: 700 12px -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; letter-spacing: 0; }
   .stat-value { fill: #0d1117; font: 800 21px ui-monospace, SFMono-Regular, Menlo, monospace; }
   .stat-label { fill: #656d76; font: 11px -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
   .pixel-dark { fill: #24292f; }
@@ -19,12 +19,12 @@
   }
 </style>
 <rect class="panel" x="0.5" y="0.5" width="899" height="319" rx="8"/>
-<rect x="0" y="0" width="10" height="320" rx="5" fill="#7c5cfc"/>
+<rect x="0" y="0" width="10" height="320" rx="5" fill="#00e01a"/>
 <text x="54" y="48" class="eyebrow">HONGSEONGUG812-UI · 자동 큐레이션 프로필</text>
-<text x="54" y="118" class="name">hsu<animate attributeName="opacity" values="1;0.82;1" dur="4s" repeatCount="indefinite"/></text>
-<rect x="54" y="138" width="62" height="5" fill="#7c5cfc"/>
+<text x="54" y="118" class="name">홍성욱<animate attributeName="opacity" values="1;0.82;1" dur="4s" repeatCount="indefinite"/></text>
+<rect x="54" y="138" width="62" height="5" fill="#00e01a"/>
 <text x="54" y="164" class="headline">풀스택 개발자</text>
-<text x="54" y="184" class="meta">Python  /  JavaScript</text>
+<text x="54" y="184" class="meta">Python  /  JavaScript  /  TypeScript</text>
 <g transform="translate(54 226)">
   <text x="0" y="18" class="stat-value">22</text><text x="0" y="39" class="stat-label">공개 프로젝트</text>
   <text x="170" y="18" class="stat-value">Python</text><text x="170" y="39" class="stat-label">주 사용 언어</text>
@@ -32,13 +32,13 @@
 </g>
 <g transform="translate(680 54)">
   <g><animateTransform attributeName="transform" type="translate" values="0 0;0 -8;0 0" dur="3s" repeatCount="indefinite"/>
-    <rect x="0" y="22" width="28" height="28" fill="#7c5cfc"/><rect x="28" y="22" width="28" height="28" class="pixel-dark"/>
-    <rect x="56" y="22" width="28" height="28" fill="#7c5cfc"/><rect x="28" y="50" width="28" height="28" fill="#7c5cfc"/>
+    <rect x="0" y="22" width="28" height="28" fill="#00e01a"/><rect x="28" y="22" width="28" height="28" class="pixel-dark"/>
+    <rect x="56" y="22" width="28" height="28" fill="#00e01a"/><rect x="28" y="50" width="28" height="28" fill="#00e01a"/>
   </g>
   <g transform="translate(82 92)"><animateTransform attributeName="transform" type="translate" additive="sum" values="0 0;10 0;0 0" dur="4s" repeatCount="indefinite"/>
-    <rect width="24" height="24" class="pixel-soft"/><rect x="24" width="24" height="24" fill="#7c5cfc"/>
+    <rect width="24" height="24" class="pixel-soft"/><rect x="24" width="24" height="24" fill="#00e01a"/>
     <rect x="48" width="24" height="24" class="pixel-dark"/><rect x="24" y="24" width="24" height="24" class="pixel-dark"/>
   </g>
-  <path d="M0 190H150M0 208H112M0 226H132" stroke="#7c5cfc" stroke-width="7"/>
+  <path d="M0 190H150M0 208H112M0 226H132" stroke="#00e01a" stroke-width="7"/>
 </g>
 </svg>
