@@ -13,8 +13,9 @@ def _post(url: str, payload: dict, headers: dict | None = None) -> dict:
 
 
 SUMMARY_PROMPT = (
-    "Summarize this GitHub repository in 2-3 concise sentences. "
-    "State what it does, its key features, and its tech stack if mentioned; no marketing language.\\n\\n"
+    "Summarize this GitHub repository in 2-3 concise Korean sentences (한국어로 작성). "
+    "State what it does, its key features, and its tech stack if mentioned; no marketing language. "
+    "Reply only with the Korean summary, no English, no preamble.\\n\\n"
 )
 
 
