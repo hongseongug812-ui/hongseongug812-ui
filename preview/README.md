@@ -50,17 +50,6 @@
       <p><a href="https://github.com/hongseongug812-ui/auto-profile-curator"><b>저장소 보기 →</b></a></p>
     </td>
     <td width="50%" valign="top">
-      <h3><a href="https://github.com/hongseongug812-ui/llm-bench-dashboard">llm-bench-dashboard</a></h3>
-      <p>이 저장소에서 관리 중인 오픈소스 프로젝트입니다.</p>
-      <p>
-<img src="https://img.shields.io/badge/-Python-333333?style=flat-square" alt="Python">        <img src="https://img.shields.io/github/stars/hongseongug812-ui/llm-bench-dashboard?style=flat-square&label=%E2%98%85&color=00e01a&labelColor=333333" alt="stars">
-        <img src="https://img.shields.io/github/last-commit/hongseongug812-ui/llm-bench-dashboard?style=flat-square&label=updated&color=00e01a&labelColor=333333" alt="last commit">
-      </p>
-      <p><a href="https://github.com/hongseongug812-ui/llm-bench-dashboard"><b>저장소 보기 →</b></a></p>
-    </td>
-  </tr>
-  <tr>
-    <td width="50%" valign="top">
       <h3><a href="https://github.com/hongseongug812-ui/mc-devkit">mc-devkit</a></h3>
       <p>이 저장소에서 관리 중인 오픈소스 프로젝트입니다.</p>
       <p>
@@ -68,6 +57,17 @@
         <img src="https://img.shields.io/github/last-commit/hongseongug812-ui/mc-devkit?style=flat-square&label=updated&color=00e01a&labelColor=333333" alt="last commit">
       </p>
       <p><a href="https://github.com/hongseongug812-ui/mc-devkit"><b>저장소 보기 →</b></a></p>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <h3><a href="https://github.com/hongseongug812-ui/llm-bench-dashboard">llm-bench-dashboard</a></h3>
+      <p>이 저장소에서 관리 중인 오픈소스 프로젝트입니다.</p>
+      <p>
+<img src="https://img.shields.io/badge/-Python-333333?style=flat-square" alt="Python">        <img src="https://img.shields.io/github/stars/hongseongug812-ui/llm-bench-dashboard?style=flat-square&label=%E2%98%85&color=00e01a&labelColor=333333" alt="stars">
+        <img src="https://img.shields.io/github/last-commit/hongseongug812-ui/llm-bench-dashboard?style=flat-square&label=updated&color=00e01a&labelColor=333333" alt="last commit">
+      </p>
+      <p><a href="https://github.com/hongseongug812-ui/llm-bench-dashboard"><b>저장소 보기 →</b></a></p>
     </td>
     <td width="50%" valign="top">
       <h3><a href="https://github.com/hongseongug812-ui/debete-arena">debete-arena</a></h3>
