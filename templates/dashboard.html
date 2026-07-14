@@ -146,9 +146,9 @@
   </fieldset>
 
   <fieldset>
-    <legend>활동 내역 <span class="hint" style="font-weight:400;font-size:12px;">(한 줄에 하나씩 "기간 | 제목 | 설명", 비우면 저장소 활동으로 자동 구성)</span></legend>
+    <legend>활동 내역 <span class="hint" style="font-weight:400;font-size:12px;">(제목 / 기간 / 설명 순으로 세 줄, 활동 사이는 빈 줄로 구분. 비우면 저장소 활동으로 자동 구성)</span></legend>
     <label>활동</label>
-    <textarea name="activities" placeholder="2026.03 | 사이드 프로젝트 A | 무엇을 만들고 배웠는지&#10;2025.11 | 해커톤 우승 | 3일간 만든 AI 서비스로 대상 수상">{{ activities_text }}</textarea>
+    <textarea name="activities" style="min-height:160px" placeholder="사이드 프로젝트 A&#10;2026.03&#10;무엇을 만들고 배웠는지&#10;&#10;해커톤 우승&#10;2025.11.20 - 2025.11.21&#10;3일간 만든 AI 서비스로 대상 수상">{{ activities_text }}</textarea>
   </fieldset>
 
   <fieldset>

@@ -54,13 +54,35 @@ def split_commas(raw: str) -> list[str]:
 
 
 def parse_activities(raw: str) -> list[dict]:
-    """Parse '기간 | 제목 | 설명' lines (one per activity) into year-grouped activities."""
+    """Parse activity blocks into year-grouped activities.
+
+    Each activity is either one line "기간 | 제목 | 설명", or a block of up to
+    three lines (제목 / 기간 / 설명) separated from the next activity by a
+    blank line — whichever way someone naturally types it.
+    """
+    entries: list[tuple[str, str, str]] = []
+    blocks = [block for block in re.split(r"\n\s*\n", raw.strip()) if block.strip()]
+    for block in blocks:
+        lines = [line.strip() for line in block.splitlines() if line.strip()]
+        if not lines:
+            continue
+        if any("|" in line for line in lines):
+            for line in lines:
+                if "|" not in line:
+                    continue
+                parts = [part.strip() for part in line.split("|")]
+                period, title = parts[0], parts[1] if len(parts) > 1 else ""
+                description = parts[2] if len(parts) > 2 else ""
+                entries.append((title, period, description))
+        else:
+            title = lines[0]
+            period = lines[1] if len(lines) > 1 else ""
+            description = lines[2] if len(lines) > 2 else ""
+            entries.append((title, period, description))
+
     by_year: dict[str, list[dict]] = {}
     order: list[str] = []
-    for line in split_lines(raw):
-        parts = [part.strip() for part in line.split("|")]
-        period, title = parts[0], parts[1] if len(parts) > 1 else ""
-        description = parts[2] if len(parts) > 2 else ""
+    for title, period, description in entries:
         if not title:
             continue
         year = period[:4] if period[:4].isdigit() else "기타"
@@ -72,11 +94,11 @@ def parse_activities(raw: str) -> list[dict]:
 
 
 def format_activities(activities: list[dict]) -> str:
-    lines = []
+    blocks = []
     for group in activities:
         for item in group.get("items", []):
-            lines.append(f"{item.get('period', '')} | {item.get('title', '')} | {item.get('description', '')}")
-    return "\n".join(lines)
+            blocks.append(f"{item.get('title', '')}\n{item.get('period', '')}\n{item.get('description', '')}")
+    return "\n\n".join(blocks)
 
 
 def apply_form(config: dict, fields: dict[str, str]) -> None:

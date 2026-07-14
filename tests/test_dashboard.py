@@ -59,6 +59,19 @@ class ActivitiesTests(unittest.TestCase):
         apply_form(config, {"github_username": "octocat", "activities": ""})
         self.assertEqual(config["activities"], [])
 
+    def test_parses_three_line_blocks_separated_by_blank_lines(self):
+        raw = "프로그래밍 입문\n2020\n고등학교 2학년 때 처음 코딩을 접하며 개발에 입문.\n\n교내 해커톤 2등 수상\n2026.02.20 - 2026.02.21\nAI 주식 추천 봇 개발 및 발표."
+        activities = parse_activities(raw)
+        self.assertEqual([group["year"] for group in activities], ["2026", "2020"])
+        self.assertEqual(activities[1]["items"][0], {
+            "title": "프로그래밍 입문", "period": "2020", "description": "고등학교 2학년 때 처음 코딩을 접하며 개발에 입문.",
+        })
+        self.assertEqual(activities[0]["items"][0]["period"], "2026.02.20 - 2026.02.21")
+
+    def test_block_with_only_title_and_period_has_empty_description(self):
+        activities = parse_activities("현장실습\n2026.07.13 - 현재")
+        self.assertEqual(activities[0]["items"][0]["description"], "")
+
 
 class ParseRepoSlugTests(unittest.TestCase):
     def test_https_url(self):
