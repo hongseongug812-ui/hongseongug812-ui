@@ -24,7 +24,7 @@ GitHub 사용자명
 - `config.yml`의 필드명 / 구조 임의 변경 금지 — 빈 값은 자동 분석으로 채워지는 설계이므로 필드를 지우거나 이름을 바꾸면 템플릿 사용자 전체가 깨짐.
 - **비어 있는 값을 자동 분석 결과로 채우는 오버라이드 우선순위**(사용자가 `config.yml`에 직접 입력한 값 > 저장소 분석 결과) 를 스크립트 수정 시 유지할 것.
 - 토큰/시크릿(`GITHUB_TOKEN`, `ANTHROPIC_API_KEY`, `DISCORD_WEBHOOK_URL`)을 코드·문서·커밋에 직접 적지 않는다. 항상 저장소 Secret 또는 환경 변수로만 참조.
-- 핵심 파이프라인은 유료 서비스 없이 동작해야 함 (`CONTRIBUTING.md` 원칙). 기본 LLM 요약은 Ollama 로컬 모델(`qwen2.5:3b-instruct`)이며, `llm.provider: cloud`는 선택 사항으로만 유지.
+- 핵심 파이프라인은 유료 서비스 없이 동작해야 함 (`CONTRIBUTING.md` 원칙). 기본 LLM 요약은 Ollama 로컬 모델(`gemma4:e2b`)이며, `llm.provider: cloud`는 선택 사항으로만 유지.
 - 대표 프로젝트 선정 로직(`score_projects.py`)에서 포크·보관 저장소는 계속 제외 대상으로 유지.
 - 생성된 산출물(`preview/`, `.cache/`, 개인 README 내용)을 템플릿 저장소 자체에 커밋하지 않는다.
 - 스크립트나 템플릿 수정 시 관련 유닛 테스트(`tests/test_score_projects.py`, `tests/test_dashboard.py` 등)를 추가·갱신.

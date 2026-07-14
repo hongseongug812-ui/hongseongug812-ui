@@ -48,7 +48,7 @@ selection:
 
 llm:
   provider: local # local (Ollama) | cloud (Anthropic; optional)
-  model: qwen2.5:3b-instruct
+  model: gemma4:e2b
   max_readme_chars: 3500
 
 render:

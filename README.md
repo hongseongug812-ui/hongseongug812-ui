@@ -166,7 +166,7 @@ python scripts/dashboard.py
 
 ## AI 요약
 
-기본 설정은 GitHub Actions 러너에서 Ollama와 `qwen2.5:3b-instruct`를 실행합니다. 프로젝트 README 요약 내용은 SHA별로 캐시되어 변경되지 않은 저장소를 반복 처리하지 않습니다.
+기본 설정은 GitHub Actions 러너에서 Ollama와 `gemma4:e2b`를 실행합니다. 프로젝트 README 요약 내용은 SHA별로 캐시되어 변경되지 않은 저장소를 반복 처리하지 않습니다.
 
 외부 모델을 사용하려면 `llm.provider`를 `cloud`로 변경하고 저장소 Secret에 `ANTHROPIC_API_KEY`를 추가할 수 있습니다. 선택 사항이며 기본 기능에는 필요하지 않습니다.
 

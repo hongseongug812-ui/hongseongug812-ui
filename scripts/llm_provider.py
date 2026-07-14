@@ -28,7 +28,7 @@ def call_anthropic(readme: str, model: str) -> str:
 def summarize(readme: str, settings: dict) -> str:
     provider = settings.get("provider", "local")
     if provider == "local":
-        return call_ollama(readme, settings.get("model", "qwen2.5:3b-instruct"))
+        return call_ollama(readme, settings.get("model", "gemma4:e2b"))
     if provider == "cloud":
         return call_anthropic(readme, settings.get("model", "claude-3-5-haiku-latest"))
     raise ValueError(f"Unknown LLM provider: {provider}")

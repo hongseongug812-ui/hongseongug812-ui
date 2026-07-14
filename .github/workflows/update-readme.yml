@@ -32,7 +32,7 @@ jobs:
 
       - uses: ./.github/actions/setup-ollama
         with:
-          model: qwen2.5:3b-instruct
+          model: gemma4:e2b
 
       - name: Build curated profile
         env:

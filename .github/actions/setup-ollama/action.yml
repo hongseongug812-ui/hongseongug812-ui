@@ -4,7 +4,7 @@ inputs:
   model:
     description: Ollama model to pull when not cached
     required: false
-    default: qwen2.5:3b-instruct
+    default: gemma4:e2b
 runs:
   using: composite
   steps:
