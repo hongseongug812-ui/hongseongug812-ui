@@ -52,6 +52,32 @@ def split_commas(raw: str) -> list[str]:
     return [item.strip() for item in raw.split(",") if item.strip()]
 
 
+def parse_activities(raw: str) -> list[dict]:
+    """Parse '기간 | 제목 | 설명' lines (one per activity) into year-grouped activities."""
+    by_year: dict[str, list[dict]] = {}
+    order: list[str] = []
+    for line in split_lines(raw):
+        parts = [part.strip() for part in line.split("|")]
+        period, title = parts[0], parts[1] if len(parts) > 1 else ""
+        description = parts[2] if len(parts) > 2 else ""
+        if not title:
+            continue
+        year = period[:4] if period[:4].isdigit() else "기타"
+        if year not in by_year:
+            by_year[year] = []
+            order.append(year)
+        by_year[year].append({"title": title, "description": description, "period": period})
+    return [{"year": year, "items": by_year[year]} for year in sorted(order, reverse=True)]
+
+
+def format_activities(activities: list[dict]) -> str:
+    lines = []
+    for group in activities:
+        for item in group.get("items", []):
+            lines.append(f"{item.get('period', '')} | {item.get('title', '')} | {item.get('description', '')}")
+    return "\n".join(lines)
+
+
 def apply_form(config: dict, fields: dict[str, str]) -> None:
     profile = config.setdefault("profile", {})
     for name in TEXT_FIELDS:
@@ -71,6 +97,8 @@ def apply_form(config: dict, fields: dict[str, str]) -> None:
     theme_color = fields.get("theme_color", "").strip().lstrip("#")
     if theme_color:
         render["theme_color"] = theme_color
+
+    config["activities"] = parse_activities(fields.get("activities", ""))
 
 
 def run_pipeline() -> list[dict]:
@@ -100,6 +128,7 @@ def render_page(status: list[dict] | None) -> str:
         llm_provider=config.get("llm", {}).get("provider", "local"),
         theme_color=config.get("render", {}).get("theme_color", "7c5cfc"),
         list_fields={name: "\n".join(profile.get(name, [])) for name in LIST_FIELDS},
+        activities_text=format_activities(config.get("activities", [])),
         status=status,
         readme_exists=README_PATH.exists(),
         assets_ready=(ASSETS_DIR / "header.svg").exists(),

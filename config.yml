@@ -2,16 +2,17 @@
 profile:
   # Only github_username is required. Empty name uses the GitHub display name.
   # Empty headline, interests, strengths, focus, stacks, and activities are inferred from repositories.
-  name: "" # Enter another display name here to override GitHub.
+  name: "홍성욱" # Enter another display name here to override GitHub.
   headline: "" # Enter another role here to override repository analysis.
-  introduction: ""
+  introduction: "분야에 경계를 두지 않고, 필요한 것을 무엇이든 만들어내는 개발자입니다"
   story: ""
   affiliation: ""
   interests: []
-  certifications: []
+  certifications:
+  - CLF-C02 (AWS Certified Cloud Practitioner)
   strengths: []
   current_focus: []
-  email: ""
+  email: "hongseongug812@gmail.com"
   blog_url: ""
   github_username: "hongseongug812-ui" # Empty in Actions = repository owner's username
 
@@ -52,6 +53,6 @@ llm:
   max_readme_chars: 3500
 
 render:
-  theme_color: "7c5cfc"
+  theme_color: "00e01a"
   header_svg_path: assets/header.svg
   language_svg_path: assets/languages.svg

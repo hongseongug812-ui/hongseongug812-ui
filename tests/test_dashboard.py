@@ -3,7 +3,7 @@ from pathlib import Path
 import unittest
 
 sys.path.insert(0, str(Path(__file__).parents[1] / "scripts"))
-from dashboard import apply_form, split_commas, split_lines
+from dashboard import apply_form, format_activities, parse_activities, split_commas, split_lines
 
 
 class SplitHelperTests(unittest.TestCase):
@@ -39,6 +39,25 @@ class ApplyFormTests(unittest.TestCase):
         self.assertEqual(config["render"]["theme_color"], "7c5cfc")
         apply_form(config, {"github_username": "octocat", "theme_color": "#ff0000"})
         self.assertEqual(config["render"]["theme_color"], "ff0000")
+
+
+class ActivitiesTests(unittest.TestCase):
+    def test_parse_groups_by_year_and_sorts_years_descending(self):
+        activities = parse_activities("2025.11 | 해커톤 우승 | 3일 만에 만든 AI 서비스\n2026.03 | 사이드 프로젝트 A | 설명")
+        self.assertEqual([group["year"] for group in activities], ["2026", "2025"])
+        self.assertEqual(activities[0]["items"][0]["title"], "사이드 프로젝트 A")
+
+    def test_parse_skips_lines_without_a_title(self):
+        self.assertEqual(parse_activities("2026.03 |  | \n\n"), [])
+
+    def test_format_and_parse_round_trip(self):
+        original = [{"year": "2026", "items": [{"title": "A", "description": "d", "period": "2026.03"}]}]
+        self.assertEqual(parse_activities(format_activities(original)), original)
+
+    def test_apply_form_falls_back_to_auto_inference_when_blank(self):
+        config = {"profile": {}, "stacks": {}, "activities": [{"year": "2020", "items": []}]}
+        apply_form(config, {"github_username": "octocat", "activities": ""})
+        self.assertEqual(config["activities"], [])
 
 
 if __name__ == "__main__":
