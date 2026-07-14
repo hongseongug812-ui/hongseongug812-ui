@@ -47,7 +47,7 @@
   <tr>
     <td width="50%" valign="top">
       <h3><a href="https://github.com/hongseongug812-ui/auto-profile-curator">auto-profile-curator</a></h3>
-      <p><a href="https://github.com/hongseongug812-ui/auto-profile-curator">Auto Profile Curator is a GitHub repository that automatically curates and updates a README file for public repositories, analyzing the codebase to infer key information such as profile name, role, technology stack, and recent project activity.</a></p>
+      <p><a href="https://github.com/hongseongug812-ui/auto-profile-curator">This repository automates the process of analyzing a user's public GitHub repositories and activity to automatically curate and update a personalized profile README using local LLM summarization.</a></p>
       <p><sub><b>Python</b> · ★ 0 · 포크 0 · 업데이트 2026-07-14</sub></p>
     </td>
     <td width="50%" valign="top">
@@ -59,7 +59,7 @@
   <tr>
     <td width="50%" valign="top">
       <h3><a href="https://github.com/hongseongug812-ui/hongseongug812-ui">hongseongug812-ui</a></h3>
-      <p><a href="https://github.com/hongseongug812-ui/hongseongug812-ui">This GitHub repository automates the analysis and curation of README files for public repositories, generating optimized profiles based on key information such as roles, technologies used, projects, and recent activity.</a></p>
+      <p><a href="https://github.com/hongseongug812-ui/hongseongug812-ui">This repository contains projects demonstrating skills in full-stack development, backend systems, and AI/LLM applications, including tools for automatically curating public repository profiles and benchmarking local large language models.</a></p>
       <p><sub><b>Python</b> · ★ 0 · 포크 0 · 업데이트 2026-07-14</sub></p>
     </td>
     <td width="50%" valign="top">
@@ -96,9 +96,17 @@
 
 ### 2026
 
-- **auto-profile-curator** <sub>2026.07</sub> — GitHub 사용자명 하나로 완성하는 자동 프로필 README 생성 도구- **hongseongug812-ui** <sub>2026.07</sub> — Python 프로젝트- **llm-bench-dashboard** <sub>2026.07</sub> — Python 프로젝트- **mc-devkit** <sub>2026.07</sub> — JavaScript 프로젝트### 2025
+- **auto-profile-curator** <sub>2026.07</sub> — GitHub 사용자명 하나로 완성하는 자동 프로필 README 생성 도구
+- **hongseongug812-ui** <sub>2026.07</sub> — Python 프로젝트
+- **llm-bench-dashboard** <sub>2026.07</sub> — Python 프로젝트
+- **mc-devkit** <sub>2026.07</sub> — JavaScript 프로젝트
 
-- **voxy** <sub>2025.12</sub> — 실시간 음성 번역 - **TFT_Game** <sub>2025.11</sub> — Unity ShaderLab 기반 TFT 스타일 전략 게임 프로젝트
+### 2025
+
+- **voxy** <sub>2025.12</sub> — 실시간 음성 번역 
+- **TFT_Game** <sub>2025.11</sub> — Unity ShaderLab 기반 TFT 스타일 전략 게임 프로젝트
+
+
 ---
 
 <div align="center"><sub>공개 저장소를 기반으로 자동 큐레이션 · 매시간 갱신</sub></div>
