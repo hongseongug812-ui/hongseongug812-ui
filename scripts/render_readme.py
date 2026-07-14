@@ -106,11 +106,17 @@ def infer_stacks(repositories: list[dict]) -> dict[str, list[str]]:
 
 
 def infer_activities(repositories: list[dict]) -> list[dict]:
+    candidates = sorted(
+        (
+            repo for repo in repositories
+            if repo.get("last_commit_at") and not repo.get("is_fork") and not repo.get("is_archived")
+        ),
+        key=lambda repo: repo["last_commit_at"],
+        reverse=True,
+    )
     by_year: dict[str, list[dict]] = defaultdict(list)
-    for repo in repositories:
-        timestamp = repo.get("last_commit_at")
-        if timestamp:
-            by_year[timestamp[:4]].append(repo)
+    for repo in candidates:
+        by_year[repo["last_commit_at"][:4]].append(repo)
     activities = []
     for year in sorted(by_year, reverse=True)[:3]:
         items = []
@@ -118,7 +124,7 @@ def infer_activities(repositories: list[dict]) -> list[dict]:
             items.append({
                 "title": repo["name"],
                 "description": repo.get("description") or f"{(repo.get('primary_language') or {}).get('name', '소프트웨어')} 프로젝트",
-                "period": year,
+                "period": f"{year}.{repo['last_commit_at'][5:7]}",
             })
         activities.append({"year": year, "items": items})
     return activities
@@ -161,7 +167,12 @@ def main() -> None:
             f"공개 저장소 {len(all_repositories)}개를 통한 실전 경험",
             f"{', '.join(profile['interests'][-3:])} 기반 제품 개발 경험",
         ]
-    environment = Environment(loader=FileSystemLoader("templates"), autoescape=select_autoescape())
+    environment = Environment(
+        loader=FileSystemLoader("templates"),
+        autoescape=select_autoescape(),
+        trim_blocks=True,
+        lstrip_blocks=True,
+    )
     stacks = config.get("stacks", {}).copy()
     inferred_stacks = infer_stacks(all_repositories)
     for category, values in inferred_stacks.items():
