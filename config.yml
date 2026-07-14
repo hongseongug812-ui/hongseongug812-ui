@@ -25,7 +25,23 @@ stacks:
 
 development_tools: []
 
-activities: []
+activities:
+- year: '2026'
+  items:
+  - title: 대만 단기 연수, 대만 — IT 기업 및 대학교 방문
+    description: 현지 IT 기업 및 대학교를 방문하며 글로벌 개발 환경을 견학.
+    period: 2026.01.14 - 2026.01.17
+  - title: 교내 해커톤, 연성대학교 — 2등 수상
+    description: Microsoft Azure를 활용한 AI 주식 추천 봇 개발 및 발표.
+    period: 2026.02.20 - 2026.02.21
+  - title: 에스파이온 코리아 — 현장실습
+    description: 기업 실무 환경에서 현장실습을 수행하며 개발 업무 경험을 쌓는 중.
+    period: 2026.07.13 - 현재
+- year: '2020'
+  items:
+  - title: 프로그래밍 입문
+    description: 고등학교 2학년 때 처음 코딩을 접하며 개발에 입문.
+    period: '2020'
 # Example:
 # activities:
 #   - year: "2026"
