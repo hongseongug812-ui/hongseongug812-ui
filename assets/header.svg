@@ -28,7 +28,7 @@
 <g transform="translate(54 226)">
   <text x="0" y="18" class="stat-value">22</text><text x="0" y="39" class="stat-label">공개 프로젝트</text>
   <text x="170" y="18" class="stat-value">Python</text><text x="170" y="39" class="stat-label">주 사용 언어</text>
-  <text x="390" y="18" class="stat-value">2026-07-15</text><text x="390" y="39" class="stat-label">최근 업데이트</text>
+  <text x="390" y="18" class="stat-value">2026-07-16</text><text x="390" y="39" class="stat-label">최근 업데이트</text>
 </g>
 <g transform="translate(680 54)">
   <g><animateTransform attributeName="transform" type="translate" values="0 0;0 -8;0 0" dur="3s" repeatCount="indefinite"/>
