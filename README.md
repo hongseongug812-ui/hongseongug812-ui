@@ -17,7 +17,7 @@
 
 
 <table>
-<tr><td><b>관심 분야</b></td><td>풀스택 · 백엔드 · AI/LLM · Python · JavaScript · Java</td></tr><tr><td><b>자격증</b></td><td>CLF-C02 (AWS Certified Cloud Practitioner)</td></tr><tr><td><b>강점</b></td><td><ul><li>공개 저장소 22개를 통한 실전 경험</li><li>Python, JavaScript, Java 기반 제품 개발 경험</li></ul></td></tr><tr><td><b>현재 집중하는 것</b></td><td><ul><li>풀스택 프로젝트 진행 중</li><li>백엔드 프로젝트 진행 중</li></ul></td></tr></table>
+<tr><td><b>관심 분야</b></td><td>풀스택 · 백엔드 · AI/LLM · Python · JavaScript · Java</td></tr><tr><td><b>자격증</b></td><td>CLF-C02 (AWS Certified Cloud Practitioner)</td></tr><tr><td><b>강점</b></td><td><ul><li>공개 저장소 23개를 통한 실전 경험</li><li>Python, JavaScript, Java 기반 제품 개발 경험</li></ul></td></tr><tr><td><b>현재 집중하는 것</b></td><td><ul><li>풀스택 프로젝트 진행 중</li><li>백엔드 프로젝트 진행 중</li></ul></td></tr></table>
 
 <br>
 
