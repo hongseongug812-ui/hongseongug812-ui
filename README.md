@@ -17,7 +17,7 @@
 
 
 <table>
-<tr><td><b>관심 분야</b></td><td>풀스택 · 백엔드 · AI/LLM · Python · TypeScript · JavaScript</td></tr><tr><td><b>자격증</b></td><td>CLF-C02 (AWS Certified Cloud Practitioner)</td></tr><tr><td><b>강점</b></td><td><ul><li>공개 저장소 23개를 통한 실전 경험</li><li>Python, TypeScript, JavaScript 기반 제품 개발 경험</li></ul></td></tr><tr><td><b>현재 집중하는 것</b></td><td><ul><li>풀스택 프로젝트 진행 중</li><li>백엔드 프로젝트 진행 중</li></ul></td></tr></table>
+<tr><td><b>관심 분야</b></td><td>풀스택 · 백엔드 · AI/LLM · TypeScript · Python · JavaScript</td></tr><tr><td><b>자격증</b></td><td>CLF-C02 (AWS Certified Cloud Practitioner)</td></tr><tr><td><b>강점</b></td><td><ul><li>공개 저장소 23개를 통한 실전 경험</li><li>TypeScript, Python, JavaScript 기반 제품 개발 경험</li></ul></td></tr><tr><td><b>현재 집중하는 것</b></td><td><ul><li>풀스택 프로젝트 진행 중</li><li>백엔드 프로젝트 진행 중</li></ul></td></tr></table>
 
 <br>
 
@@ -62,7 +62,7 @@
   <tr>
     <td width="50%" valign="top">
       <h3><a href="https://github.com/hongseongug812-ui/workall">workall</a></h3>
-      <p>이 프로젝트는 실시간 대화(Chat), 맥락 보존형 지식 흐름(Knowledge Flow), 그리고 팀 운영 정보(Team Operation)를 하나의 플랫폼으로 통합하는 시스템입니다. 핵심 기능으로는 스레드 기반의 대화 관리, 파일 공유 및 검색을 통한 맥락 유지, 그리고 조직도 및 출퇴근 체크를 포함한 실시간 근태 관리가 포함됩니다. 개발에는 React, TypeScript, Socket.IO 기술 스택이 사용되었습니다.</p>
+      <p>이 프로젝트는 실시간 대화, 지식 관리(스레드 및 파일 공유), 팀 운영(출퇴근 및 상태 관리) 기능을 하나의 시스템으로 통합하여 업무 맥락을 연결하는 것을 목표로 합니다. 사용자는 메신저와 자료가 분리되지 않고 자연스러운 흐름으로 연결되어 정보 탐색 시간을 줄이고 업무에 집중할 수 있습니다. 개발에는 React, TypeScript, Socket.IO 기술 스택이 사용되었습니다.</p>
       <p>
 <img src="https://img.shields.io/badge/-TypeScript-333333?style=flat-square" alt="TypeScript">        <img src="https://img.shields.io/github/stars/hongseongug812-ui/workall?style=flat-square&label=%E2%98%85&color=00e01a&labelColor=333333" alt="stars">
         <img src="https://img.shields.io/github/last-commit/hongseongug812-ui/workall?style=flat-square&label=updated&color=00e01a&labelColor=333333" alt="last commit">
