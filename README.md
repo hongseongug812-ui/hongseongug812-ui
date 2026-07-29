@@ -17,7 +17,7 @@
 
 
 <table>
-<tr><td><b>관심 분야</b></td><td>풀스택 · 백엔드 · AI/LLM · TypeScript · Python · JavaScript</td></tr><tr><td><b>자격증</b></td><td>CLF-C02 (AWS Certified Cloud Practitioner)</td></tr><tr><td><b>강점</b></td><td><ul><li>공개 저장소 24개를 통한 실전 경험</li><li>TypeScript, Python, JavaScript 기반 제품 개발 경험</li></ul></td></tr><tr><td><b>현재 집중하는 것</b></td><td><ul><li>풀스택 프로젝트 진행 중</li><li>백엔드 프로젝트 진행 중</li></ul></td></tr></table>
+<tr><td><b>관심 분야</b></td><td>풀스택 · 백엔드 · AI/LLM · TypeScript · Python · JavaScript</td></tr><tr><td><b>자격증</b></td><td>CLF-C02 (AWS Certified Cloud Practitioner)</td></tr><tr><td><b>강점</b></td><td><ul><li>공개 저장소 25개를 통한 실전 경험</li><li>TypeScript, Python, JavaScript 기반 제품 개발 경험</li></ul></td></tr><tr><td><b>현재 집중하는 것</b></td><td><ul><li>풀스택 프로젝트 진행 중</li><li>백엔드 프로젝트 진행 중</li></ul></td></tr></table>
 
 <br>
 
@@ -81,6 +81,15 @@
   </tr>
   <tr>
     <td width="50%" valign="top">
+      <h3><a href="https://github.com/hongseongug812-ui/pulse-youtube-dashboard">pulse-youtube-dashboard</a></h3>
+      <p>이 프로젝트는 YouTube 채널의 실시간 구독자 수, 날짜별 성장 추이, 콘텐츠 흐름을 한 화면에서 제공하는 팀 공유형 분석 대시보드입니다. 주요 기능으로는 구독자 성장 계산, 영상 운영 진단 및 실행안 제공, 목표 관리 등이 포함됩니다. 기술 스택은 Next.js와 React로 구성되어 있으며, YouTube Data API와 Cloudflare D1 데이터베이스를 활용합니다.</p>
+      <p>
+<img src="https://img.shields.io/badge/-TypeScript-333333?style=flat-square" alt="TypeScript">        <img src="https://img.shields.io/github/stars/hongseongug812-ui/pulse-youtube-dashboard?style=flat-square&label=%E2%98%85&color=00e01a&labelColor=333333" alt="stars">
+        <img src="https://img.shields.io/github/last-commit/hongseongug812-ui/pulse-youtube-dashboard?style=flat-square&label=updated&color=00e01a&labelColor=333333" alt="last commit">
+      </p>
+      <p><a href="https://github.com/hongseongug812-ui/pulse-youtube-dashboard"><b>저장소 보기 →</b></a></p>
+    </td>
+    <td width="50%" valign="top">
       <h3><a href="https://github.com/hongseongug812-ui/llm-bench-dashboard">llm-bench-dashboard</a></h3>
       <p>이 프로젝트는 로컬 LLM의 성능을 Mac(Apple Silicon)과 Windows(Nvidia GPU) 환경에서 수치적으로 비교하는 올인원 CLI 도구입니다. 이 도구는 llama.cpp나 Ollama 같은 호환 엔드포인트에 동시성 부하를 걸어 TTFT, 처리량, 메모리 사용량 등의 지표를 측정하고 이를 대시보드에서 시각화하여 자동 판정합니다. 최종적으로는 수집된 결과를 바탕으로 PDF 보고서를 생성할 수 있도록 설계되었습니다.</p>
       <p>
@@ -88,15 +97,6 @@
         <img src="https://img.shields.io/github/last-commit/hongseongug812-ui/llm-bench-dashboard?style=flat-square&label=updated&color=00e01a&labelColor=333333" alt="last commit">
       </p>
       <p><a href="https://github.com/hongseongug812-ui/llm-bench-dashboard"><b>저장소 보기 →</b></a></p>
-    </td>
-    <td width="50%" valign="top">
-      <h3><a href="https://github.com/hongseongug812-ui/grounded_work_ai">grounded_work_ai</a></h3>
-      <p>이 프로젝트는 조직 문서 기반의 근거형 답변 및 초안 생성을 제공하는 AI 업무 에이전트 플랫폼입니다. 핵심 기능으로는 RAG(검색 증강 생성)를 통한 Q&A, 승인 기반 실행 시스템, 그리고 관리자 대시보드 모니터링 기능이 포함됩니다. 기술 스택은 프론트엔드로 Next.js와 TypeScript를, 백엔드로 FastAPI와 Python을 사용하며 PostgreSQL(pgvector) 데이터베이스 및 LLM 연동 기능을 활용합니다.</p>
-      <p>
-<img src="https://img.shields.io/badge/-Python-333333?style=flat-square" alt="Python">        <img src="https://img.shields.io/github/stars/hongseongug812-ui/grounded_work_ai?style=flat-square&label=%E2%98%85&color=00e01a&labelColor=333333" alt="stars">
-        <img src="https://img.shields.io/github/last-commit/hongseongug812-ui/grounded_work_ai?style=flat-square&label=updated&color=00e01a&labelColor=333333" alt="last commit">
-      </p>
-      <p><a href="https://github.com/hongseongug812-ui/grounded_work_ai"><b>저장소 보기 →</b></a></p>
     </td>
   </tr>
 </table>
