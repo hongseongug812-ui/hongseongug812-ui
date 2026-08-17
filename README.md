@@ -51,7 +51,7 @@
     </td>
     <td width="50%" valign="top">
       <h3><a href="https://github.com/hongseongug812-ui/mc-devkit">mc-devkit</a></h3>
-      <p>MC DevKit은 마인크래프트 서버를 웹 기반으로 쉽게 관리할 수 있게 해주는 툴입니다. 이 도구는 포트포워딩 없이 playit.gg 연동을 통해 외부 접속을 지원하며, 팀원 권한 관리, 실시간 모니터링, 모드 설치 및 성능 최적화 기능을 제공합니다. Fabric, Paper 등 다양한 서버 유형을 지원하며 Aikar's JVM 플러그인과 Lithium 등의 성능 최적화 기능을 통합하여 서버 관리를 용이하게 합니다.</p>
+      <p>MC DevKit은 웹 기반으로 마인크래프트 서버를 쉽게 관리할 수 있는 도구입니다. 이 툴은 포트포워딩 없이 외부 접속을 지원하며, 팀원 권한 관리, 모드 설치, 성능 최적화, 실시간 모니터링 등의 기능을 제공합니다. Fabric, Paper 등 다양한 서버 버전을 지원하며 playit.gg 연동을 통해 서버 접속을 관리하는 기능을 핵심으로 합니다.</p>
       <p>
 <img src="https://img.shields.io/badge/-JavaScript-333333?style=flat-square" alt="JavaScript">        <img src="https://img.shields.io/github/stars/hongseongug812-ui/mc-devkit?style=flat-square&label=%E2%98%85&color=00e01a&labelColor=333333" alt="stars">
         <img src="https://img.shields.io/github/last-commit/hongseongug812-ui/mc-devkit?style=flat-square&label=updated&color=00e01a&labelColor=333333" alt="last commit">
