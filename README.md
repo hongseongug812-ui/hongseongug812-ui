@@ -17,7 +17,7 @@
 
 
 <table>
-<tr><td><b>관심 분야</b></td><td>풀스택 · 백엔드 · AI/LLM · Python · TypeScript · JavaScript</td></tr><tr><td><b>자격증</b></td><td>CLF-C02 (AWS Certified Cloud Practitioner)</td></tr><tr><td><b>강점</b></td><td><ul><li>공개 저장소 25개를 통한 실전 경험</li><li>Python, TypeScript, JavaScript 기반 제품 개발 경험</li></ul></td></tr><tr><td><b>현재 집중하는 것</b></td><td><ul><li>풀스택 프로젝트 진행 중</li><li>백엔드 프로젝트 진행 중</li></ul></td></tr></table>
+<tr><td><b>관심 분야</b></td><td>풀스택 · 백엔드 · AI/LLM · JavaScript · Python · TypeScript</td></tr><tr><td><b>자격증</b></td><td>CLF-C02 (AWS Certified Cloud Practitioner)</td></tr><tr><td><b>강점</b></td><td><ul><li>공개 저장소 25개를 통한 실전 경험</li><li>JavaScript, Python, TypeScript 기반 제품 개발 경험</li></ul></td></tr><tr><td><b>현재 집중하는 것</b></td><td><ul><li>풀스택 프로젝트 진행 중</li><li>백엔드 프로젝트 진행 중</li></ul></td></tr></table>
 
 <br>
 
@@ -51,7 +51,7 @@
     </td>
     <td width="50%" valign="top">
       <h3><a href="https://github.com/hongseongug812-ui/mc-devkit">mc-devkit</a></h3>
-      <p>MC DevKit은 마인크래프트 서버를 웹 기반으로 쉽게 관리할 수 있도록 돕는 도구입니다. 이 도구는 포트포워딩 없이 외부 접속을 지원하며, 팀원 권한 관리, 실시간 모니터링, 모드/플러그인 업로드 기능을 제공합니다. 또한 Aikar's JVM 플러그인 적용 등 성능 최적화 기능과 playit.gg 연동을 통해 서버 관리를 자동화합니다.</p>
+      <p>MC DevKit은 마인크래프트 서버를 웹 기반으로 쉽게 관리할 수 있게 해주는 툴입니다. 이 도구는 포트포워딩 없이 playit.gg 연동을 통해 외부 접속을 지원하며, 팀원 권한 관리, 실시간 모니터링, 모드 설치 및 성능 최적화 기능을 제공합니다. Fabric, Paper 등 다양한 서버 유형을 지원하며 Aikar's JVM 플러그인과 Lithium 등의 성능 최적화 기능을 통합하여 서버 관리를 용이하게 합니다.</p>
       <p>
 <img src="https://img.shields.io/badge/-JavaScript-333333?style=flat-square" alt="JavaScript">        <img src="https://img.shields.io/github/stars/hongseongug812-ui/mc-devkit?style=flat-square&label=%E2%98%85&color=00e01a&labelColor=333333" alt="stars">
         <img src="https://img.shields.io/github/last-commit/hongseongug812-ui/mc-devkit?style=flat-square&label=updated&color=00e01a&labelColor=333333" alt="last commit">
