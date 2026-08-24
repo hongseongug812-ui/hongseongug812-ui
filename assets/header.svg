@@ -24,7 +24,7 @@
 <text x="54" y="118" class="name">홍성욱<animate attributeName="opacity" values="1;0.82;1" dur="4s" repeatCount="indefinite"/></text>
 <rect x="54" y="138" width="62" height="5" fill="#00e01a"/>
 <text x="54" y="164" class="headline">풀스택 개발자</text>
-<text x="54" y="184" class="meta">TypeScript  /  JavaScript  /  Python</text>
+<text x="54" y="184" class="meta">JavaScript  /  TypeScript  /  Python</text>
 <g transform="translate(54 226)">
   <text x="0" y="18" class="stat-value">25</text><text x="0" y="39" class="stat-label">공개 프로젝트</text>
   <text x="170" y="18" class="stat-value">TypeScript</text><text x="170" y="39" class="stat-label">주 사용 언어</text>

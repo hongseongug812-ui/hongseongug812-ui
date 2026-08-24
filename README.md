@@ -41,15 +41,6 @@
 <table>
   <tr>
     <td width="50%" valign="top">
-      <h3><a href="https://github.com/hongseongug812-ui/orbit_db_controller">orbit_db_controller</a></h3>
-      <p>orbit_db_controller는 PostgreSQL, MySQL, MongoDB 등 다양한 SQL 및 NoSQL 데이터베이스를 하나의 통합 로비에서 탐색하고 관리할 수 있는 macOS 데스크톱 클라이언트입니다. 이 도구는 연결 정보 관리, 스키마/컬렉션 탐색, 데이터 미리보기, 읽기 전용 쿼리 실행 등의 기능을 제공하여 데이터 접근의 안전성과 효율성을 높입니다. 보안 원칙을 적용하여 사용자가 실제 운영 데이터를 실수로 변경하지 않고 데이터에 대한 조회만 수행하도록 설계되었습니다.</p>
-      <p>
-<img src="https://img.shields.io/badge/-TypeScript-333333?style=flat-square" alt="TypeScript">        <img src="https://img.shields.io/github/stars/hongseongug812-ui/orbit_db_controller?style=flat-square&label=%E2%98%85&color=00e01a&labelColor=333333" alt="stars">
-        <img src="https://img.shields.io/github/last-commit/hongseongug812-ui/orbit_db_controller?style=flat-square&label=updated&color=00e01a&labelColor=333333" alt="last commit">
-      </p>
-      <p><a href="https://github.com/hongseongug812-ui/orbit_db_controller"><b>저장소 보기 →</b></a></p>
-    </td>
-    <td width="50%" valign="top">
       <h3><a href="https://github.com/hongseongug812-ui/mc-devkit">mc-devkit</a></h3>
       <p>MC DevKit은 마인크래프트 서버를 웹 기반으로 쉽게 열고 관리할 수 있는 도구입니다. 이 툴은 포트포워딩 없이 playit.gg를 통해 외부 접속을 지원하며, 팀원 권한 관리, 실시간 모니터링, 모드/플러그인 업로드 기능을 제공합니다. 또한 Aikar's JVM 플러그인 적용 등의 성능 최적화 기능을 포함하며 Fabric, Paper 서버를 지원합니다.</p>
       <p>
@@ -58,8 +49,6 @@
       </p>
       <p><a href="https://github.com/hongseongug812-ui/mc-devkit"><b>저장소 보기 →</b></a></p>
     </td>
-  </tr>
-  <tr>
     <td width="50%" valign="top">
       <h3><a href="https://github.com/hongseongug812-ui/workall">workall</a></h3>
       <p>이 프로젝트는 실시간 대화, 지식 관리(스레드 및 파일 공유), 팀 운영(출퇴근 및 상태 관리) 기능을 하나의 시스템으로 통합하여 업무 맥락을 연결하는 것을 목표로 합니다. 사용자는 메신저와 자료가 분리되지 않고 자연스러운 흐름으로 연결되어 정보 탐색 시간을 줄이고 업무에 집중할 수 있습니다. 개발에는 React, TypeScript, Socket.IO 기술 스택이 사용되었습니다.</p>
@@ -69,6 +58,8 @@
       </p>
       <p><a href="https://github.com/hongseongug812-ui/workall"><b>저장소 보기 →</b></a></p>
     </td>
+  </tr>
+  <tr>
     <td width="50%" valign="top">
       <h3><a href="https://github.com/hongseongug812-ui/pulse-youtube-dashboard">pulse-youtube-dashboard</a></h3>
       <p>이 프로젝트는 YouTube 채널의 실시간 구독자 수, 날짜별 성장 추이, 콘텐츠 흐름을 한 화면에서 제공하는 팀 공유형 분석 대시보드입니다. 주요 기능으로는 구독자 성장 계산, 영상 운영 진단 및 실행안 제공, 목표 관리 등이 포함됩니다. 기술 스택은 Next.js와 React로 구성되어 있으며, YouTube Data API와 Cloudflare D1 데이터베이스를 활용합니다.</p>
@@ -77,6 +68,15 @@
         <img src="https://img.shields.io/github/last-commit/hongseongug812-ui/pulse-youtube-dashboard?style=flat-square&label=updated&color=00e01a&labelColor=333333" alt="last commit">
       </p>
       <p><a href="https://github.com/hongseongug812-ui/pulse-youtube-dashboard"><b>저장소 보기 →</b></a></p>
+    </td>
+    <td width="50%" valign="top">
+      <h3><a href="https://github.com/hongseongug812-ui/orbit_db_controller">orbit_db_controller</a></h3>
+      <p>orbit_db_controller는 PostgreSQL, MySQL, MongoDB 등 다양한 SQL 및 NoSQL 데이터베이스를 하나의 통합 로비에서 탐색하고 관리할 수 있는 macOS 데스크톱 클라이언트입니다. 이 도구는 연결 정보 관리, 스키마/컬렉션 탐색, 데이터 미리보기, 읽기 전용 쿼리 실행 등의 기능을 제공하여 데이터 접근의 안전성과 효율성을 높입니다. 보안 원칙을 적용하여 사용자가 실제 운영 데이터를 실수로 변경하지 않고 데이터에 대한 조회만 수행하도록 설계되었습니다.</p>
+      <p>
+<img src="https://img.shields.io/badge/-TypeScript-333333?style=flat-square" alt="TypeScript">        <img src="https://img.shields.io/github/stars/hongseongug812-ui/orbit_db_controller?style=flat-square&label=%E2%98%85&color=00e01a&labelColor=333333" alt="stars">
+        <img src="https://img.shields.io/github/last-commit/hongseongug812-ui/orbit_db_controller?style=flat-square&label=updated&color=00e01a&labelColor=333333" alt="last commit">
+      </p>
+      <p><a href="https://github.com/hongseongug812-ui/orbit_db_controller"><b>저장소 보기 →</b></a></p>
     </td>
   </tr>
   <tr>
