@@ -17,7 +17,7 @@
 
 
 <table>
-<tr><td><b>관심 분야</b></td><td>풀스택 · 백엔드 · AI/LLM · Python · JavaScript · TypeScript</td></tr><tr><td><b>자격증</b></td><td>CLF-C02 (AWS Certified Cloud Practitioner)</td></tr><tr><td><b>강점</b></td><td><ul><li>공개 저장소 25개를 통한 실전 경험</li><li>Python, JavaScript, TypeScript 기반 제품 개발 경험</li></ul></td></tr><tr><td><b>현재 집중하는 것</b></td><td><ul><li>풀스택 프로젝트 진행 중</li><li>백엔드 프로젝트 진행 중</li></ul></td></tr></table>
+<tr><td><b>관심 분야</b></td><td>풀스택 · 백엔드 · AI/LLM · JavaScript · Python · TypeScript</td></tr><tr><td><b>자격증</b></td><td>CLF-C02 (AWS Certified Cloud Practitioner)</td></tr><tr><td><b>강점</b></td><td><ul><li>공개 저장소 25개를 통한 실전 경험</li><li>JavaScript, Python, TypeScript 기반 제품 개발 경험</li></ul></td></tr><tr><td><b>현재 집중하는 것</b></td><td><ul><li>풀스택 프로젝트 진행 중</li><li>백엔드 프로젝트 진행 중</li></ul></td></tr></table>
 
 <br>
 
@@ -41,6 +41,15 @@
 <table>
   <tr>
     <td width="50%" valign="top">
+      <h3><a href="https://github.com/hongseongug812-ui/mc-devkit">mc-devkit</a></h3>
+      <p>MC DevKit은 마인크래프트 서버를 쉽게 열고 관리할 수 있는 웹 기반 관리 도구입니다. 이 툴은 포트포워딩 없이 외부 접속을 지원하며, 팀원 권한 관리, 콘텐츠 모드팩 동기화, 실시간 모니터링 기능을 제공합니다. Paper, Fabric, Forge 등 다양한 서버 환경을 지원하며 Aikar's JVM 플러그 등 성능 최적화 기능이 포함되어 있습니다.</p>
+      <p>
+<img src="https://img.shields.io/badge/-JavaScript-333333?style=flat-square" alt="JavaScript">        <img src="https://img.shields.io/github/stars/hongseongug812-ui/mc-devkit?style=flat-square&label=%E2%98%85&color=00e01a&labelColor=333333" alt="stars">
+        <img src="https://img.shields.io/github/last-commit/hongseongug812-ui/mc-devkit?style=flat-square&label=updated&color=00e01a&labelColor=333333" alt="last commit">
+      </p>
+      <p><a href="https://github.com/hongseongug812-ui/mc-devkit"><b>저장소 보기 →</b></a></p>
+    </td>
+    <td width="50%" valign="top">
       <h3><a href="https://github.com/hongseongug812-ui/orbit_db_controller">orbit_db_controller</a></h3>
       <p>orbit_db_controller는 PostgreSQL, MySQL, MongoDB 등 다양한 SQL 및 NoSQL 데이터베이스를 하나의 통합 로비에서 탐색하고 관리할 수 있는 macOS 데스크톱 클라이언트입니다. 이 도구는 연결 정보 관리, 스키마/컬렉션 탐색, 데이터 미리보기, 읽기 전용 쿼리 실행 등의 기능을 제공하여 데이터 접근의 안전성과 효율성을 높입니다. 보안 원칙을 적용하여 사용자가 실제 운영 데이터를 실수로 변경하지 않고 데이터에 대한 조회만 수행하도록 설계되었습니다.</p>
       <p>
@@ -48,15 +57,6 @@
         <img src="https://img.shields.io/github/last-commit/hongseongug812-ui/orbit_db_controller?style=flat-square&label=updated&color=00e01a&labelColor=333333" alt="last commit">
       </p>
       <p><a href="https://github.com/hongseongug812-ui/orbit_db_controller"><b>저장소 보기 →</b></a></p>
-    </td>
-    <td width="50%" valign="top">
-      <h3><a href="https://github.com/hongseongug812-ui/auto-profile-curator">auto-profile-curator</a></h3>
-      <p>이 저장소는 공개 GitHub 저장소를 분석하여 프로필 README에 필요한 역할, 기술 스택, 대표 프로젝트 등을 자동으로 구성하고 큐레이션하는 도구입니다. 사용자 이름 입력과 로컬 LLM을 활용하며, 별점, 포크 수 등의 기준으로 프로젝트를 점수화합니다. GitHub Actions를 통해 매시간 활동을 확인하고 변경 사항이 있을 때만 프로필 내용을 자동 갱신합니다.</p>
-      <p>
-<img src="https://img.shields.io/badge/-Python-333333?style=flat-square" alt="Python">        <img src="https://img.shields.io/github/stars/hongseongug812-ui/auto-profile-curator?style=flat-square&label=%E2%98%85&color=00e01a&labelColor=333333" alt="stars">
-        <img src="https://img.shields.io/github/last-commit/hongseongug812-ui/auto-profile-curator?style=flat-square&label=updated&color=00e01a&labelColor=333333" alt="last commit">
-      </p>
-      <p><a href="https://github.com/hongseongug812-ui/auto-profile-curator"><b>저장소 보기 →</b></a></p>
     </td>
   </tr>
   <tr>
