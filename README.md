@@ -50,17 +50,6 @@
       <p><a href="https://github.com/hongseongug812-ui/mc-devkit"><b>저장소 보기 →</b></a></p>
     </td>
     <td width="50%" valign="top">
-      <h3><a href="https://github.com/hongseongug812-ui/orbit_db_controller">orbit_db_controller</a></h3>
-      <p>orbit_db_controller는 PostgreSQL, MySQL, MongoDB 등 다양한 SQL 및 NoSQL 데이터베이스를 하나의 통합 로비에서 탐색하고 관리할 수 있는 macOS 데스크톱 클라이언트입니다. 이 도구는 연결 정보 관리, 스키마/컬렉션 탐색, 데이터 미리보기, 읽기 전용 쿼리 실행 등의 기능을 제공하여 데이터 접근의 안전성과 효율성을 높입니다. 보안 원칙을 적용하여 사용자가 실제 운영 데이터를 실수로 변경하지 않고 데이터에 대한 조회만 수행하도록 설계되었습니다.</p>
-      <p>
-<img src="https://img.shields.io/badge/-TypeScript-333333?style=flat-square" alt="TypeScript">        <img src="https://img.shields.io/github/stars/hongseongug812-ui/orbit_db_controller?style=flat-square&label=%E2%98%85&color=00e01a&labelColor=333333" alt="stars">
-        <img src="https://img.shields.io/github/last-commit/hongseongug812-ui/orbit_db_controller?style=flat-square&label=updated&color=00e01a&labelColor=333333" alt="last commit">
-      </p>
-      <p><a href="https://github.com/hongseongug812-ui/orbit_db_controller"><b>저장소 보기 →</b></a></p>
-    </td>
-  </tr>
-  <tr>
-    <td width="50%" valign="top">
       <h3><a href="https://github.com/hongseongug812-ui/grounded_work_ai">grounded_work_ai</a></h3>
       <p>이 프로젝트는 조직 문서 기반의 근거형 답변 및 초안 생성을 제공하는 AI 업무 에이전트 플랫폼입니다. 핵심 기능으로는 RAG(검색 증강 생성)를 통한 Q&A, 승인 기반 실행 시스템, 그리고 관리자 대시보드 모니터링 기능이 포함됩니다. 기술 스택은 프론트엔드로 Next.js와 TypeScript를, 백엔드로 FastAPI와 Python을 사용하며 PostgreSQL(pgvector) 데이터베이스 및 LLM 연동 기능을 활용합니다.</p>
       <p>
@@ -69,6 +58,8 @@
       </p>
       <p><a href="https://github.com/hongseongug812-ui/grounded_work_ai"><b>저장소 보기 →</b></a></p>
     </td>
+  </tr>
+  <tr>
     <td width="50%" valign="top">
       <h3><a href="https://github.com/hongseongug812-ui/safewave">safewave</a></h3>
       <p>SafeWave는 카메라나 웨어러블 없이 WiFi 신호(CSI) 분석을 통해 낙상, 침입, 장시간 무활동을 실시간으로 감지하는 비접촉식 AI 안전관리 플랫폼입니다. 이 시스템은 4개의 WiFi 센서를 이용하여 실내 위치를 추적하고, 낙상 등의 안전 위험 발생 시 WebSocket을 통해 보호자에게 즉시 알림을 제공합니다. 핵심 기술 스택으로는 PyTorch 기반의 CNN-GRU AI 모델, FastAPI 백엔드, 그리고 React 프론트엔드가 사용되었습니다.</p>
@@ -78,8 +69,6 @@
       </p>
       <p><a href="https://github.com/hongseongug812-ui/safewave"><b>저장소 보기 →</b></a></p>
     </td>
-  </tr>
-  <tr>
     <td width="50%" valign="top">
       <h3><a href="https://github.com/hongseongug812-ui/pixel-project-hq">pixel-project-hq</a></h3>
       <p>이 프로젝트는 픽셀아트 스타일의 AI 회사 프로젝트 관리 대시보드로, AI 직원들이 실시간으로 프로젝트를 처리하는 탑뷰(God View) 방식으로 업무를 시각화합니다. 주요 기능으로는 GPT-4o 기반 에이전트 채팅 및 자연어 명령을 통한 AI 어시스턴트, 서버 모니터링, 파일 드롭 자동 등록 등의 기능을 제공합니다. 백엔드는 Supabase를 사용하며 프론트엔드는 React와 TypeScript로 구축되었습니다.</p>
@@ -89,6 +78,8 @@
       </p>
       <p><a href="https://github.com/hongseongug812-ui/pixel-project-hq"><b>저장소 보기 →</b></a></p>
     </td>
+  </tr>
+  <tr>
     <td width="50%" valign="top">
       <h3><a href="https://github.com/hongseongug812-ui/debete-arena">debete-arena</a></h3>
       <p>이 프로젝트는 사용자가 입력한 질문에 대해 다양한 페르소나를 가진 AI 에이전트들이 실시간으로 토론하고 심판 에이전트가 최종 결론을 도출하는 멀티에이전트 토론 웹 서비스입니다.
@@ -99,6 +90,15 @@
         <img src="https://img.shields.io/github/last-commit/hongseongug812-ui/debete-arena?style=flat-square&label=updated&color=00e01a&labelColor=333333" alt="last commit">
       </p>
       <p><a href="https://github.com/hongseongug812-ui/debete-arena"><b>저장소 보기 →</b></a></p>
+    </td>
+    <td width="50%" valign="top">
+      <h3><a href="https://github.com/hongseongug812-ui/agentic_web_builder">agentic_web_builder</a></h3>
+      <p>이 저장소는 create-next-app을 사용하여 초기화된 Next.js 프로젝트입니다. 이 프로젝트는 `app/page.tsx` 파일을 수정하여 기본 페이지를 구성합니다. 또한 `next/font` 기능을 사용하여 Geist 폰트를 자동으로 최적화하고 로드하는 기능을 활용합니다.</p>
+      <p>
+<img src="https://img.shields.io/badge/-TypeScript-333333?style=flat-square" alt="TypeScript">        <img src="https://img.shields.io/github/stars/hongseongug812-ui/agentic_web_builder?style=flat-square&label=%E2%98%85&color=00e01a&labelColor=333333" alt="stars">
+        <img src="https://img.shields.io/github/last-commit/hongseongug812-ui/agentic_web_builder?style=flat-square&label=updated&color=00e01a&labelColor=333333" alt="last commit">
+      </p>
+      <p><a href="https://github.com/hongseongug812-ui/agentic_web_builder"><b>저장소 보기 →</b></a></p>
     </td>
   </tr>
 </table>
